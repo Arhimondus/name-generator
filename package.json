@@ -1,0 +1,27 @@
+{
+  "name": "name-generator",
+  "module": "lib.ts",
+  "type": "module",
+  "scripts": {
+    "test": "bun tests.ts",
+    "build": "bun tsc --target es2017 --moduleResolution bundler ./index.ts"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "bun": "./index.ts",
+      "node": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chance": "^1.1.11"
+  }
+}
